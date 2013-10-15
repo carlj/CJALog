@@ -202,9 +202,9 @@
 			productReference = FA8B01FF17D9C03700033FE8 /* CJALog.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA8B021E17D9C03700033FE8 /* Tests */ = {
+		FA8B021E17D9C03700033FE8 /* CJALogTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA8B023417D9C03700033FE8 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = FA8B023417D9C03700033FE8 /* Build configuration list for PBXNativeTarget "CJALogTests" */;
 			buildPhases = (
 				FA8B021A17D9C03700033FE8 /* Sources */,
 				FA8B021B17D9C03700033FE8 /* Frameworks */,
@@ -216,7 +216,7 @@
 			dependencies = (
 				FA8B022517D9C03700033FE8 /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = CJALogTests;
 			productName = CJALogTests;
 			productReference = FA8B021F17D9C03700033FE8 /* Tests.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -243,7 +243,7 @@
 			projectRoot = "";
 			targets = (
 				FA8B01FE17D9C03700033FE8 /* CJALog */,
-				FA8B021E17D9C03700033FE8 /* Tests */,
+				FA8B021E17D9C03700033FE8 /* CJALogTests */,
 			);
 		};
 /* End PBXProject section */
@@ -381,6 +381,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/CJALog-Prefix.pch";
 				INFOPLIST_FILE = "Example/Other Sources/CJALog-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -405,6 +406,8 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/CJALog-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Other Sources/CJALogTests-Info.plist";
@@ -422,6 +425,8 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/CJALog-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Other Sources/CJALogTests-Info.plist";
@@ -452,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA8B023417D9C03700033FE8 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		FA8B023417D9C03700033FE8 /* Build configuration list for PBXNativeTarget "CJALogTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA8B023517D9C03700033FE8 /* Debug */,
