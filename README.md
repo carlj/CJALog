@@ -2,6 +2,10 @@
 
 A simple wrapper around the [`<asl.h>`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man3/asl.3.html) log functions 
 
+[![Build Status](https://travis-ci.org/carlj/CJALog.png?branch=master)](https://travis-ci.org/carlj/CJALog)
+[![Coverage Status](https://coveralls.io/repos/carlj/CJALog/badge.png?branch=master)](https://coveralls.io/r/carlj/CJALog?branch=master)
+
+
 ##Description
 You can log a message with different log levels, these levels are defined in [`<asl.h>`:](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man3/asl.3.html)
  
