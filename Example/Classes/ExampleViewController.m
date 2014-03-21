@@ -16,22 +16,21 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  CJALogEmergency(@"%s Emergency Log", __FUNCTION__);
   
-  CJALogEmergency(@"Emergency Log");
-  
-  CJALogAlert(@"Alert Log");
+  CJALogAlert(@"%s Alert Log", __FUNCTION__);
 
-  CJALogCritical(@"Critical Log");
+  CJALogCritical(@"%s Critical Log", __FUNCTION__);
 
-  CJALogError(@"Error Log");
+  CJALogError(@"%s Error Log", __FUNCTION__);
   
-  CJALogWarning(@"Warning Log");
+  CJALogWarning(@"%s Warning Log", __FUNCTION__);
   
-  CJALogNotice(@"Notice Log");
+  CJALogNotice(@"%s Notice Log", __FUNCTION__);
   
-  CJALogInfo(@"Info Log");
+  CJALogInfo(@"%s Info Log", __FUNCTION__);
   
-  CJALogDebug(@"Debug Log");
+  CJALogDebug(@"%s Debug Log", __FUNCTION__);
 }
 
 @end

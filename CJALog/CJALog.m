@@ -39,111 +39,12 @@ BOOL CJALogWithLevel(NSUInteger level, NSString *format, ...) {
   CJALogInit();
   
   va_list ap;
-	va_start(ap,format);
+  va_start(ap,format);
   
-  int result = asl_log(NULL, NULL, level, [format UTF8String], ap);
-  
-	va_end(ap);
-  
-  if (0 == result) {
-    return YES;
-  }
-  
-  return NO;
-}
+  NSString *message = [[NSString alloc] initWithFormat:format arguments:ap];
+  int result = asl_log(NULL, NULL, (int)level, "%s", [message UTF8String]);
 
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_EMERG
-void CJALogEmergency(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_EMERG, format, ap);
-  
-	va_end(ap);
-}
-#endif
+  va_end(ap);
 
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_ALERT
-void CJALogAlert(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_ALERT, format, ap);
-  
-	va_end(ap);
+  return !result;
 }
-#endif
-
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_CRIT
-void CJALogCritical(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_CRIT, format, ap);
-  
-	va_end(ap);
-}
-#endif
-
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_ERR
-void CJALogError(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_ERR, format, ap);
-  
-	va_end(ap);
-}
-#endif
-
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_WARNING
-void CJALogWarning(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_WARNING, format, ap);
-  
-	va_end(ap);
-}
-#endif
-
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_NOTICE
-void CJALogNotice(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_NOTICE, format, ap);
-  
-	va_end(ap);
-}
-#endif
-
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_INFO
-void CJALogInfo(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_INFO, format, ap);
-  
-	va_end(ap);
-}
-#endif
-
-#if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_DEBUG
-void CJALogDebug(NSString *format, ...) {
-  
-  va_list ap;
-	va_start(ap, format);
-  
-  CJALogWithLevel(ASL_LEVEL_DEBUG, format, ap);
-  
-	va_end(ap);
-}
-#endif

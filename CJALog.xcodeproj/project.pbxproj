@@ -48,7 +48,7 @@
 		FA8B021417D9C03700033FE8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Example/Ressources/Default.png; sourceTree = "<group>"; };
 		FA8B021617D9C03700033FE8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Example/Ressources/Default@2x.png"; sourceTree = "<group>"; };
 		FA8B021817D9C03700033FE8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Example/Ressources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		FA8B021F17D9C03700033FE8 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8B021F17D9C03700033FE8 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.octest; path = CJALogTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B022017D9C03700033FE8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FA8B023B17D9C13F00033FE8 /* CJALogTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CJALogTests-Info.plist"; path = "Tests/Other Sources/CJALogTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FA8B023D17D9C1C400033FE8 /* CJALog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJALog.h; sourceTree = "<group>"; };
@@ -227,6 +227,7 @@
 		FA8B01F717D9C03700033FE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Carl Jahn";
 			};
@@ -381,6 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/CJALog-Prefix.pch";
 				INFOPLIST_FILE = "Example/Other Sources/CJALog-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -393,6 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/CJALog-Prefix.pch";
 				INFOPLIST_FILE = "Example/Other Sources/CJALog-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -78,51 +78,51 @@ BOOL CJALogWithLevel(NSUInteger level, NSString *format, ...);
 
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_EMERG
-  void CJALogEmergency(NSString *format, ...);
+#define CJALogEmergency(format, ...) CJALogWithLevel(ASL_LEVEL_EMERG, format, __VA_ARGS__)
 #else
-  #define CJALogEmergency(...)
+#define CJALogEmergency(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_ALERT
-  void CJALogAlert(NSString *format, ...);
+#define CJALogAlert(format, ...) CJALogWithLevel(ASL_LEVEL_ALERT, format, __VA_ARGS__)
 #else
-  #define CJALogAlert(...)
+#define CJALogAlert(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_CRIT
-  void CJALogCritical(NSString *format, ...);
+#define CJALogCritical(format, ...) CJALogWithLevel(ASL_LEVEL_CRIT, format, __VA_ARGS__)
 #else
-  #define CJALogCritical(...)
+#define CJALogCritical(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_ERR
-  void CJALogError(NSString *format, ...);
+#define CJALogError(format, ...) CJALogWithLevel(ASL_LEVEL_ERR, format, __VA_ARGS__)
 #else
-  #define CJALogError(...)
+#define CJALogError(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_WARNING
-  void CJALogWarning(NSString *format, ...);
+#define CJALogWarning(format, ...) CJALogWithLevel(ASL_LEVEL_WARNING, format, __VA_ARGS__)
 #else
-  #define CJALogWarning(...)
+#define CJALogWarning(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_NOTICE
-  void CJALogNotice(NSString *format, ...);
+#define CJALogNotice(format, ...) CJALogWithLevel(ASL_LEVEL_NOTICE, format, __VA_ARGS__)
 #else
-  #define CJALogNotice(...)
+#define CJALogNotice(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_INFO
-  void CJALogInfo(NSString *format, ...);
+#define CJALogInfo(format, ...) CJALogWithLevel(ASL_LEVEL_INFO, format, __VA_ARGS__)
 #else
-  #define CJALogInfo(...)
+#define CJALogInfo(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_DEBUG
-  void CJALogDebug(NSString *format, ...);
+#define CJALogDebug(format, ...) CJALogWithLevel(ASL_LEVEL_DEBUG, format, __VA_ARGS__)
 #else
-  #define CJALogDebug(...)
+#define CJALogDebug(...)
 #endif
 
 
