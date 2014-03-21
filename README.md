@@ -52,21 +52,21 @@ Follow good logging practices to make your logs as useful as possible:
 First of all: take a look at the example project
 
 ```objc
-CJALogEmergency(@"Emergency Log");
+CJALogEmergency(@"%s Emergency Log", __FUNCTION__);
+  
+CJALogAlert(@"%s Alert Log", __FUNCTION__);
 
-CJALogAlert(@"Alert Log");
+CJALogCritical(@"%s Critical Log", __FUNCTION__);
 
-CJALogCritical(@"Critical Log");
-
-CJALogError(@"Error Log");
-
-CJALogWarning(@"Warning Log");
-
-CJALogNotice(@"Notice Log");
-
-CJALogInfo(@"Info Log");
-
-CJALogDebug(@"Debug Log");
+CJALogError(@"%s Error Log", __FUNCTION__);
+  
+CJALogWarning(@"%s Warning Log", __FUNCTION__);
+  
+CJALogNotice(@"%s Notice Log", __FUNCTION__);
+  
+CJALogInfo(@"%s Info Log", __FUNCTION__);
+  
+CJALogDebug(@"%s Debug Log", __FUNCTION__);
 ```
 
 You can set your own log leven:
