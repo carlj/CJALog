@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA8B021E17D9C03700033FE8"
-               BuildableName = "CJALogTests.octest"
+               BuildableName = "CJALogTests.xctest"
                BlueprintName = "CJALogTests"
                ReferencedContainer = "container:CJALog.xcodeproj">
             </BuildableReference>

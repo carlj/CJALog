@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Carl Jahn. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface CJALogTests : SenTestCase
+@interface CJALogTests : XCTestCase
 
 @end

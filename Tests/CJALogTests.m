@@ -57,7 +57,7 @@
       return NO;
     }
     
-    //NSLog(@"%@", tmpDict);
+    //NSLog(tmpDict);
   }
   aslresponse_free(r);
 
@@ -69,9 +69,9 @@
   NSString *testString = @"Emergency Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
   
-  CJALogEmergency(@"%@", testString);
+  CJALogEmergency(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 - (void)testAlertLog {
@@ -79,9 +79,9 @@
   NSString *testString = @"Alert Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
 
-  CJALogEmergency(@"%@", testString);
+  CJALogEmergency(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 - (void)testCriticalLog {
@@ -89,9 +89,9 @@
   NSString *testString = @"Critical Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
 
-  CJALogCritical(@"%@", testString);
+  CJALogCritical(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 - (void)testErrorlLog {
@@ -99,9 +99,9 @@
   NSString *testString = @"Error Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
 
-  CJALogError(@"%@", testString);
+  CJALogError(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 - (void)testWarningLog {
@@ -109,9 +109,9 @@
   NSString *testString = @"Warning Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
 
-  CJALogWarning(@"%@", testString);
+  CJALogWarning(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 - (void)testNoticeLog {
@@ -119,9 +119,9 @@
   NSString *testString = @"Notice Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
 
-  CJALogNotice(@"%@", testString);
+  CJALogNotice(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 - (void)testInfoLog {
@@ -129,9 +129,9 @@
   NSString *testString = @"Info Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
   
-  CJALogInfo(@"%@", testString);
+  CJALogInfo(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 - (void)testDebugLog {
@@ -139,9 +139,9 @@
   NSString *testString = @"Debug Log Test";
   BOOL result = [self consoleOutputMatchString: testString];
 
-  CJALogDebug(@"%@", testString);
+  CJALogDebug(testString);
   
-  STAssertTrue(result, @"didnt find test string: %@ in console output", testString);
+  XCTAssertTrue(result, @"didnt find test string: %@ in console output", testString);
 }
 
 

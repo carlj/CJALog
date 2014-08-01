@@ -78,49 +78,49 @@ BOOL CJALogWithLevel(NSUInteger level, NSString *format, ...);
 
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_EMERG
-#define CJALogEmergency(format, ...) CJALogWithLevel(ASL_LEVEL_EMERG, format, __VA_ARGS__)
+#define CJALogEmergency(format, ...) CJALogWithLevel(ASL_LEVEL_EMERG, format, ##__VA_ARGS__)
 #else
 #define CJALogEmergency(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_ALERT
-#define CJALogAlert(format, ...) CJALogWithLevel(ASL_LEVEL_ALERT, format, __VA_ARGS__)
+#define CJALogAlert(format, ...) CJALogWithLevel(ASL_LEVEL_ALERT, format, ##__VA_ARGS__)
 #else
 #define CJALogAlert(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_CRIT
-#define CJALogCritical(format, ...) CJALogWithLevel(ASL_LEVEL_CRIT, format, __VA_ARGS__)
+#define CJALogCritical(format, ...) CJALogWithLevel(ASL_LEVEL_CRIT, format, ##__VA_ARGS__)
 #else
 #define CJALogCritical(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_ERR
-#define CJALogError(format, ...) CJALogWithLevel(ASL_LEVEL_ERR, format, __VA_ARGS__)
+#define CJALogError(format, ...) CJALogWithLevel(ASL_LEVEL_ERR, format, ##__VA_ARGS__)
 #else
 #define CJALogError(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_WARNING
-#define CJALogWarning(format, ...) CJALogWithLevel(ASL_LEVEL_WARNING, format, __VA_ARGS__)
+#define CJALogWarning(format, ...) CJALogWithLevel(ASL_LEVEL_WARNING, format, ##__VA_ARGS__)
 #else
 #define CJALogWarning(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_NOTICE
-#define CJALogNotice(format, ...) CJALogWithLevel(ASL_LEVEL_NOTICE, format, __VA_ARGS__)
+#define CJALogNotice(format, ...) CJALogWithLevel(ASL_LEVEL_NOTICE, format, ##__VA_ARGS__)
 #else
 #define CJALogNotice(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_INFO
-#define CJALogInfo(format, ...) CJALogWithLevel(ASL_LEVEL_INFO, format, __VA_ARGS__)
+#define CJALogInfo(format, ...) CJALogWithLevel(ASL_LEVEL_INFO, format, ##__VA_ARGS__)
 #else
 #define CJALogInfo(...)
 #endif
 
 #if CJA_LOG_COMPILE_LOG_LEVEL >= ASL_LEVEL_DEBUG
-#define CJALogDebug(format, ...) CJALogWithLevel(ASL_LEVEL_DEBUG, format, __VA_ARGS__)
+#define CJALogDebug(format, ...) CJALogWithLevel(ASL_LEVEL_DEBUG, format, ##__VA_ARGS__)
 #else
 #define CJALogDebug(...)
 #endif
