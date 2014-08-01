@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 
  s.name         = "CJALog"
- s.version      = "1.0.1"
+ s.version      = "1.1.0"
  s.platform     = :ios, "6.0"
- s.summary      = ""
+ s.summary      = "A simple wrapper around the <asl.h> log functions"
  s.homepage     = "https://github.com/carlj/CJALog"
  s.author       = { "Carl Jahn" => "jahncarl@gmail.com" }
  s.source       = { :git  => "https://github.com/carlj/CJALog.git", :tag => s.version.to_s }
